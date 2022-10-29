@@ -59,3 +59,17 @@ for (var i = 0; i < pokémon.length; i++) {
     }
 }
 console.log(`# of normal: ${normalcount}`);
+
+
+const grass = pokémon.filter(
+    g => {
+        for (var i = 0; i < g.types.length; i++) {
+            if (g.types[i] === "grass") {
+                return true;
+            }
+        }
+        return false;
+    }
+);
+const mapgrass = grass.map(i => i.name);
+console.log(mapgrass);
