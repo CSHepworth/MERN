@@ -6,7 +6,7 @@ export class PersonCard extends React.Component {
         this.state = {
             FirstName: this.props.FirstName,
             LastName: this.props.LastName,
-            Age: this.props.Age,
+            Age: this.props.AgeStart,
             HairColor: this.props.HairColor
         }
     }
@@ -15,14 +15,21 @@ export class PersonCard extends React.Component {
         return (
             <div>
                 <h1>
-                    {this.props.p1LastName}, {this.props.p1FirstName}
+                    {this.props.LastName}, {this.props.FirstName}
                 </h1>
                 <p>
-                    Age: {this.props.p1Age}
+                    Age: {this.state.Age}
                 </p>
                 <p>
-                    Hair Color: {this.props.p1HairColor}
+                    Hair Color: {this.props.HairColor}
                 </p>
+                <button onClick={() => {
+                    this.setState({
+                        Age: this.state.Age + 1
+                    })
+                }}>
+                    {this.props.FirstName} {this.props.LastName} birthday
+                </button>
             </div>
         );
     }

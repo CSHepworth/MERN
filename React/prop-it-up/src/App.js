@@ -8,16 +8,16 @@ function App() {
   return (
     <>
       <div>
-          <PersonCard p1FirstName = "John" p1LastName = "Dough" p1Age = {50} p1HairColor = "Brown" />
+          <PersonCard FirstName = "John" LastName = "Dough" AgeStart = {50} HairColor = "Brown" />
       </div>
       <div>
-        <PersonCard p1FirstName = "Abe" p1LastName = "Froman" p1Age = {17} p1HairColor = "Brown" />
+        <PersonCard FirstName = "Abe" LastName = "Froman" AgeStart = {17} HairColor = "Brown" />
       </div>
       <div>
-        <PersonCard p1FirstName = "Toby" p1LastName = "Van Adobe" p1Age = {62} p1HairColor = "Brown" />
+        <PersonCard FirstName = "Toby" LastName = "Van Adobe" AgeStart = {62} HairColor = "Brown" />
       </div>
       <div>
-        <PersonCard p1FirstName = "Jack" p1LastName = "Donaghy" p1Age = {55} p1HairColor = "Black/Gray" />
+        <PersonCard FirstName = "Jack" LastName = "Donaghy" AgeStart = {55} HairColor = "Black/Gray" />
       </div>
     </>
   );
