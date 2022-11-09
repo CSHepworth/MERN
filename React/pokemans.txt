@@ -1,0 +1,5 @@
+https://pokeapi.co/api/v2/pokemon/307
+https://pokeapi.co/api/v2/pokemon/diglett
+https://pokeapi.co/api/v2/pokemon/124
+https://pokeapi.co/api/v2/pokemon/dialga
+https://pokeapi.co/api/v2/pokemon/99

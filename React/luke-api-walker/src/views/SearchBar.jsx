@@ -1,10 +1,10 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 export const SearchBar = (props) => {
-    const [category, setCategory] = useState("");
+    const [category, setCategory] = useState("people");
     const [id, setId] = useState("");
     const navigate = useNavigate();
    
@@ -15,12 +15,13 @@ export const SearchBar = (props) => {
 
     const handleSearchItem = (e) => {
         e.preventDefault();
-        if (searchItem.category === "people") {
-            console.log(searchItem.category);
+        const {category} = searchItem;
+        if (category === "people") {
+            console.log(category);
             navigate(`/people/${id}`);
         }
-        else if (searchItem.category === "planets") {
-            console.log(searchItem.category);
+        else if (category === "planets") {
+            console.log(category);
             navigate(`/planets/${id}`);
         }
     }
@@ -34,7 +35,6 @@ export const SearchBar = (props) => {
                 <select onChange={(e) => {
                     setCategory(e.target.value);
                 }}>
-                    <option></option>
                     <option value="people">people</option>
                     <option value="planets">planets</option>
                 </select>

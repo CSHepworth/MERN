@@ -20,7 +20,6 @@ function App() {
                         </Link>
                     </nav>
                 </header>
-
                 <Routes>
                     <Route path='/' element={<Navigate to="/home" replace/>}/>
                     <Route path='/home' element={<Home/>}/>
