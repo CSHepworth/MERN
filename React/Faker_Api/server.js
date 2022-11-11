@@ -19,6 +19,7 @@ const createUser = () => {
     return newUser;
 };
     
+//test function
 const newFakeUser = createUser();
 console.log(newFakeUser);
 
@@ -53,7 +54,7 @@ app.get('/api/companies/new', (req, res) => {
 app.get('/api/user/company', (req, res) => {
     const newFakeUser2 = createUser();
     const newFakeCompany2 = createCompany();
-    const newFakeUserandCompany = { newFakeUser2, newFakeCompany2 };
+    const newFakeUserandCompany = { user: newFakeUser2, company: newFakeCompany2 };
     res.json(newFakeUserandCompany);
 })
 
