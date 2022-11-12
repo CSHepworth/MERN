@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import Main from './views/Main';
 import Detail from './views/Detail';
 import './App.css';
+import Update from './views/Update';
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <Route element={<Navigate to="/products" replace/>} path="/"/>
         <Route element={<Main/>} path="/products/"/>
         <Route element={<Detail/>} path="/products/:id"/>
+        <Route element={<Update/>} path="/products/:id/edit"/>
       </Routes>
     </div>
   );
