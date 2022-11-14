@@ -16,7 +16,7 @@ export const Update = (props) => {
 
     const updateAuthor = (e) => {
         e.preventDefault();
-        axios.put('http://localhost:8000/api/author/' + id, {
+        axios.put('http://localhost:8000/api/authors/' + id, {
             name
         })
             .then((res => console.log(res), navigate('/')))

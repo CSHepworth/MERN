@@ -14,8 +14,11 @@ module.exports.getOneAuthor = (req, res) => {
 
 module.exports.createAuthor = (req, res) => {
     Author.create(req.body)
-        .then(newAuthor => res.json({author: newAuthor}))
-        .catch(err => res.json({message: "Something went wrong", error: err}));
+    .then(newAuthor => res.json({author: newAuthor}))
+    .catch(err =>{
+            console.log(req.body,"here")
+            res.status(400).json(err)
+        });
 };
 
 module.exports.updateAuthor = (req, res) => {
